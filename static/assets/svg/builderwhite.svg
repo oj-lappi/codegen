@@ -1,0 +1,34 @@
+<svg    version="1.1"
+	viewBox="0 0 100 100"
+	width="auto"
+	height="auto"
+	preserveAspectRatio="none"
+	class="symbol"
+       	xmlns="http://www.w3.org/2000/svg"
+	>
+
+	<!-- handle -->
+	<polyline 
+		points="10,90 65,35"
+                stroke="black" 
+                stroke-width="8" 
+		stroke-linecap="round"
+        />
+	<polyline 
+		points="10,90 65,35"
+                stroke="white" 
+                stroke-width="3" 
+		stroke-linecap="round"
+        />
+
+	<!-- head -->
+	<polygon
+		points="45,15 75,15 95,35 80,50 "
+                stroke="black" 
+		fill="white"
+                stroke-width="2" 
+        />
+	<!--stroke="currentColor" to use css -->
+
+
+</svg>

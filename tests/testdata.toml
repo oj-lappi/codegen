@@ -1,0 +1,3 @@
+[svg]
+files = 'static/assets/svg/*'
+literals = '<symbol></symbol>'

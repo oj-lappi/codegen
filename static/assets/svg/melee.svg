@@ -1,0 +1,30 @@
+<svg    version="1.1"
+	viewBox="0 0 100 100"
+	width="auto"
+	height="auto"
+	preserveAspectRatio="none"
+	class="symbol"
+       	xmlns="http://www.w3.org/2000/svg"
+	>
+	<polyline 
+		points="10,90 30,70"
+                stroke="#34e" 
+                stroke-width="5" 
+        />
+
+	<polyline 
+		points="15,56 44,85"
+                stroke="#34e"
+                stroke-width="4" 
+        />
+
+	<polygon
+		points="25,65 80,10 90,10 90,20 35,75"
+                stroke="#34e" 
+		fill="white"
+                stroke-width="2" 
+        />
+	<!--stroke="currentColor" to use css -->
+
+
+</svg>

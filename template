@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Kugg corner</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="/assets/css/game.css"/>
+	<script src="/assets/js/vue-2.6.10.js"></script>
+	<script src="/assets/js/draganddrop.js"></script>
+</head>
+
+<body>
+	<!-- Hide svgs here ;) -->
+
+	<svg
+   		xmlns="http://www.w3.org/2000/svg"
+   		version="1.1"
+   		aria-hidden="true"
+   		style="position:absolute;width:0;height:0;"
+   	>
+	{{range .svg}}
+		{{}}
+	{{end}}
+	<!-- fort 1.0
+	<symbol id="fort" viewBox="0 0 100 100">
+		<path
+			d='M 0,0
+        		l 20,0 
+			l 0,15 l 20,0 l 0,-15 
+        		l 20,0 
+			l 0,15 l 20,0 l 0,-15
+        		l 20,0   
+        		l 0,100 l -100,0 z
+			'       
+			style="fill:currentColor"/>
+	</symbol>
+	-->
+	
+	</svg>
+<h1 class="title">Siege!</h1>
+<div id="app" class="page">
+	<div id="game-area" class="centered content-area">
+		<div id="board" style="grid-template-rows:repeat({{gridWidth .Game}},1fr);grid-template-columns:repeat({{gridHeight .Game}}, 1fr);">
+			<cell	
+				v-for="cell in cells"
+				:cell="cell"
+				:primed="selectedCell"
+				:key="cell.X+','+cell.Y"
+			/>
+		</div>
+		<div class="spawn" style="grid-template-columns:repeat(3,1fr);">
+			<spawn-square
+				v-for="piece in pieces"
+				:piece="piece"
+				:key="piece.Enum"
+			/>
+		</div>
+	</div>
+	<!-- side content -->
+	<event-feed 
+			class="wide-right wide-fullheight"
+			:name="'server-feed'"
+			:title="'Server log'"
+			:cardtype="'log-message'"
+			:items="messages"></event-feed>
+
+	<event-feed 
+		class="wide-left wide-fullheight"
+		:name="'game-feed'"
+		:title="'Game log'"
+		:cardtype="'move-result'"
+		:items="moves"></event-feed>
+
+
+</div>
+<script src="/assets/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<svg    version="1.1"
+	viewBox="0 0 100 100"
+	width="auto"
+	height="auto"
+	preserveAspectRatio="none"
+	class="symbol"
+       	xmlns="http://www.w3.org/2000/svg"
+	>
+
+<!--
+	<polygon
+		points="5,5 95,95 75,40 60,25 "
+                stroke="#e43" 
+                stroke-width="2" 
+        />
+	-->
+	<path
+		d="M15 15 C 75 40, 60 25 ,85 85"
+		stroke="#4e3"
+		stroke-width="7"
+	/>
+	<!--refactor below to two lines -->
+	<path
+		d="M15 15 L15 85 L85 85"
+		stroke="#4e3"
+		stroke-width="2"
+	/>
+	<path
+		d="M15 85 L80 20"
+		stroke="#4e3"
+		stroke-width="4"
+	/>
+	<polygon
+		points="80,20 75,22 78,25"
+		stroke="#4e3"
+		stroke-width="4"
+		fill="white"
+	/>
+	<!--stroke="currentColor" to use css -->
+
+
+</svg>
